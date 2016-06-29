@@ -1,0 +1,238 @@
+<html>
+<head>
+
+<style type="text/css">
+body
+{ 
+background-image:url('logo.jpg');
+}
+#layer1
+{
+display:block;
+position:absolute;
+margin-left:120px;
+margin-right:100px
+top:9px;
+}
+.style1
+{
+
+line-height:35px;
+font-weight:bold;
+}
+
+.one
+{
+font-size:20px;
+font:style:italic;
+font-weight:40;
+}
+p{color:white;}
+
+img{
+     margin-top:90px;
+	 margin-left:400px;
+    align:center;
+	 width:550px;
+	 height:550px;
+}
+
+pre.three
+{
+color:white;
+margin-left:150px;
+margin-right:150px;
+line-height:30px;
+}
+ul
+{
+margin-left:10px;
+margin-top:100px;
+}
+p.two
+{
+
+margin-left:800px;
+margin-top:200px;
+font-size:25px;
+color:black;
+font-style:strong;
+font-weight:60px;
+word-spacing:30px;
+}
+
+
+a:link
+{
+text-decoration:none;
+color:black;}
+a:visited{text-decoration:none;color:black;}
+a:hover{text-decoration:none;color:white;}
+a:active{text-decoration:none;color:#DAA520;}
+
+#head{
+position:absolute;
+margin-left:900px;
+margin-top:150px;
+font-family:Monotype Corsiva;
+font-size:45px;
+font-weight:bold;
+color:white;}
+
+.a{
+position:absolute;
+margin-left:100px;
+margin-top:360px;
+}
+#b
+{font-family:Monotype Corsiva;
+font-size:45px;
+font-weight:bold;
+color:white;}
+pre.ff
+{
+font-family:Lucida Calligraphy;
+font-size:20px;
+color:black;
+margin-left:00px;
+}
+.set
+{
+position:absolute;
+margin-top:230px;
+margin-left:750px;
+line-height:20px;
+align:right;
+font-size:28px;
+font-family:Rage Italic;
+font-weight:bold;
+
+}
+.set1
+{
+position:absolute;
+margin-top:600px;
+margin-left:950px;
+align:right;
+}
+
+pre.y
+{font-family:Lucida Calligraphy;
+font-size:27px;}
+
+.im
+{
+position:justify;
+margin-top:100px;
+margin-left:20px;
+height:250px;
+width:400px;
+}
+.im1
+{
+position:justify;
+margin-top:300px;
+margin-left:90px;
+width:300;
+height:200;
+}
+</style>
+<script type="text/javascript">
+function v_mail()
+{
+var x=form2.email.value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+}
+
+function p_check()
+{
+var x=form2.phone.value;
+if(x.length!=10)
+alert("Enter 10 digit phone number");
+}
+
+function submit()
+{
+var errmsg="";
+valid=true;
+if(document.form2.u_name.value=="")
+{
+errmsg+="enter user name\n";
+valid=false;
+}
+
+alert(errmsg);
+}
+</script>
+</head>
+<body>
+<div class="style1" id="layer1">
+<div align=""><pre class="y">     <a href="dev.html">HOME</a>      <a href="devika2.html"> ABOUT SALON </a>      <a href="apply.html">APPOINTMENTS</a>     <a href="contact.html">LOCATIONS</a></pre></div>
+</div>
+<div class="a" id="b">
+<div align="left">Address</br><pre class="ff">Phone: 904 825 0569
+Fax: 904 825 0549
+E-mail: debbie@debbiesdayspasalon.com
+We are located 5 blocks from the Bridge 
+of Lions (beachside)
+at: 403 Anastasia Blvd., St. Augustine, 
+Florida 32080</pre>
+</div>
+</div>
+<div id="head">
+<div align="left">FEEDBACK</div></div>
+<table class="set"
+cellpadding="12">
+
+<form name="form2" method="post" enctype="text/plain">
+<tr>
+<td>Name:</td>
+<td><input type="text" name="name" class="one" onblur="n_submit()" /></td>
+</tr>
+<tr>
+<td>Sex:</td>
+<td>
+<input type="radio" name="sex" value="male" /> Male
+<input type="radio" name="sex" value="female" /> Female</td>
+</tr>
+<tr>
+<td>E-mail:</td>
+<td><input type="text" name="email" class="one" onblur="v_mail()" /></td>
+</tr>
+<tr>
+<td>Phone-No:</td>
+<td><input type="tel" name="phone" class="one" onblur="p_check()" /></td>
+</tr>
+<tr>
+<td>Message:</td>
+<td><textarea rows="5" cols="25" class="one">
+</textarea></td>
+</tr>
+</table>
+ <table align="center" class="set1">
+<tr>
+<td><input type="submit" value="Send" class="one"></td>
+<td><input type="reset" value="Reset" class="one"></td>
+</form>
+</table>
+
+<img src="exterior.jpg" class="im"/>
+<p><a href="http://maps.google.com/maps?rlz=1T4ADRA_enUS402US402&amp;um=1&amp;ie=UTF-8&amp;q=website+map+for+feelthechange++spa+and+salon+st.
++augustine+florida+32080&amp;fb=1&amp;gl=us&amp;hq=website+map+for+debbie's+day+spa+and+salon&amp;hnear=St+Augustine,+FL&amp;cid=0,0,
+11745639585503371868&amp;ei=JKDiTILwJYG78ga7sOAY&amp;sa=X&amp;oi=local_result&amp;ct=image&amp;resnum=1&amp;ved=0CBkQnwIwAA">
+<img src="google map.gif"  alt="map" class="im1"/></a></p>
+
+
+
+ <p>&nbsp;</p>
+ <p>&nbsp;</p>
+ 
+</div>
+</body>
+</html>

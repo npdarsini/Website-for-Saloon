@@ -1,0 +1,280 @@
+<html>
+<head>
+<title>appointment</title>
+<style type="text/css">
+
+.alig
+{
+align=right;
+}
+body
+ {
+ background-image:url('logo.jpg');
+ color:black;
+ } 
+ div.transbox
+   {
+   width:530px;
+   height:600px;
+  margin-left:20px;
+   background-color:#FFC0CB;
+   border:1px solid black;
+   opacity:0.7;
+   align:right;
+   filter:alpha(opacity=40); 
+   text-align:justify;
+   overflow:auto;
+    margin:auto;
+	font-family:Monotype Corsiva; 
+	scrollbar-face-color:#780000  ;
+scrollbar-highlight-color:#555555;
+scrollbar-3dlight-color:#444444;
+scrollbar-darkshadow-color:#333333 ;
+scrollbar-shadow-color:#ffffff ;
+scrollbar-arrow-color: #222222;
+scrollbar-track-color:#111111;
+	}
+
+   div.pos
+   {
+   position:fixed;
+   top:100px;
+right:75px;
+}
+.yo
+{
+align:left;
+margin-top:120px;
+margin-left:40px;
+}
+pre
+{
+font-family:"Monotype Corsiva";
+font-size:25px;
+font-weight:bold;
+text-align:absolute;
+color:red;
+}
+#layer1
+{
+display:block;
+position:absolute;
+margin-left:120px;
+margin-right:100px
+top:9px;
+}
+.style1
+{
+
+line-height:35px;
+font-weight:bold;
+}
+a:link
+{
+text-decoration:none;
+color:black;}
+a:visited{text-decoration:none;color:black;}
+a:hover{text-decoration:none;color:white;}
+a:active{text-decoration:none;color:#DAA520;}
+
+pre.y
+{font-family:Monotype Corsiva;
+font-size:27px;}
+   
+</style>
+<script type="text/javascript">
+function v_mail()
+{
+var x=form1.email.value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+}
+
+function z_check()
+{
+var x=form1.ssn.value;
+if(x.length!=3)
+alert("Enter 3 digit ssn");
+}
+function p_check()
+{
+var x=form1.phone.value;
+if(x.length!=10)
+alert("Enter 10 digit phone number");
+}
+
+function submit()
+{
+var errmsg="";
+valid=true;
+if(document.form1.name.value=="")
+{
+errmsg+="enter user name\n";
+valid=false;
+}
+if(form1.address.value==" ")
+{
+errmsg+="enter address\n";
+valid=false;
+}
+alert(errmsg);
+}
+</script>
+</head>
+<body>
+<div class="style1" id="layer1">
+<div align=""><pre class="y">       <a href="dev.html">HOME</a>     <a href="devika2.html"> ABOUT SALON </a>     <a href="apply.html">APPOINTMENTS</a>     <a href="contact.html">LOCATIONS</a></pre></div>
+</div>
+<img src="salon8.jpg" width="630" height="500" class="yo"/> 
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+<div class="pos">
+<div class="transbox">
+<h1 align="center">Appointment</h1>
+          <pre>
+   Feel The Change Health and Spa started in 1997.
+   As we evolved and brought a whole spectrum of professional
+   hair and skin care services under one roof, we are now a
+   one stop destination for grooming and personal care. This
+    made us a commercial success story with many brands trying 
+   to emulate us. It's Loyalty Program has achieved epic
+   proportions with a loyal clientele of more than 1,00,000
+   and still counting.</pre>
+          <p>&nbsp;</p>
+          <h2 align="center">The Brand Today</h2>
+          
+   <pre>  Feel The Change has achieved "Superbrand" status. 
+      Its mantra of offering world class services and products 
+     at accessible locations with affordable pricing has made it 
+     an industry leader. Enrich is constantly expanding. We offer 
+     professional hair and skin services and products standardized 
+      to meet stringent quality control.</pre>
+   <p>&nbsp;</p>
+          <h2 align="center">The Team</h2>
+          <pre>   It has been a pioneer in nurturing 
+    talent.The team is young, with a drive and passion to
+    bethe biggest and the best. The team is constantly
+    trained and inspired. It is the only company whose 
+    creative heads present trends for the season. 
+    This has now become a style statement in the 
+    fashion world. With Feel the change constantly investing
+   in education of its team, whether technical 
+   training in hair and skin or soft skills like
+   communication or customer service excellence programs,
+   we believe that education is the key for a rewarding and 
+   successful career. With a core team that is highly experienced, 
+   internationally exposed and won serveral accolades, It
+   is the numero one employer choice for hairdressers, beauty 
+   therapists and managers. The staff strength of 400 
+   technicians is unrivalled and amongst the most dedicated 
+   to support the Enrich Philosophy..</pre>
+   
+     
+		  <h1 align="center">
+		  Appointment
+		  </h1>
+		  <h2>
+		  <table class="appointment_table">
+  <form method="post" name="form1" action="xxx.php">
+  <tr>
+    <td>Your Name: </td>
+    <td><input type="text" name="name" class="box" onblur="n_submit()"/></td>
+  </tr>
+   <tr>
+    <td>SSN</td>
+    <td><input type="text" name="ssn"  class="box" onblur="z_check()"/></td>
+  </tr>
+  <tr>
+    <td>Your E-Mail ID</td>
+    <td><input type="text" name="email"  class="box" onblur="v_mail()" /></td>
+  </tr>
+  <tr>
+    <td>Your Phone NO</td>
+    <td><input type="text" name="phone"  class="box" onblur="p_check()" /></td>
+  </tr>
+  <tr>
+    <td>Already Member</td>
+	<td>
+    <input type="radio" name="member"  class="radio_btn" value="1"/>Yes &nbsp 
+    <input type="radio" name="member"  class="radio_btn" value="0"/>No &nbsp;&nbsp;</td>
+  </tr>
+ 
+  <tr>
+ 
+    <td rowspan=5>Services Interested</td>
+        	<td><input type="checkbox" name="service_type"  class="radio_btn" value="Body Massage"/>Body Massage</td>
+        </tr>
+        	<tr>
+        	<td>
+            <input type="checkbox" name="service_type"  class="radio_btn" value="Hair"/>
+          Hair</td>
+        </tr>
+        	<tr>
+        	<td><input type="checkbox" name="service_type" class="radio_btn" value="Manicure&Pedicure"/>
+          	Manicure&Pedicure</td>
+        </tr>
+        	<tr>
+        	<td >
+            <input type="checkbox" name="service_type"  class="radio_btn" value="Beauty"/>
+          	Beauty</td>
+        </tr>
+        	<tr>
+        	<td>
+            <input type="checkbox" name="service_type" class="radio_btn" value="Facial Treatment"/>
+        Facial Treatment</td>
+        </tr>
+       </td>
+  </tr>
+   <tr>
+    <td>Appointment Date: </td>
+	<td>
+    <select name="rd_dd" id="rd_dd" style="width:50px">
+		<option value="">DD</option>
+		<option value='1'>01</option><option value='2'>02</option><option value='3'>03</option><option value='4'>04</option><option value='5'>05</option><option value='6'>06</option><option value='7'>07</option><option value='8'>08</option><option value='9'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option>	</select>
+	- 		
+	<select name="rd_mm" id="rd_mm"  style="width:50px">
+		<option value="">MMM</option>
+		12<option value='1'>Jan</option><option value='2'>Feb</option><option value='3'>Mar</option><option value='4'>Apr</option><option value='5'>May</option><option value='6'>Jun</option><option value='7'>Jul</option><option value='8'>Aug</option><option value='9'>Sep</option><option value='10'>Oct</option><option value='11'>Nov</option><option value='12'>Dec</option>	</select>
+	-
+	<select name="rd_yy" id="rd_yy"  style="width:90px">
+	<option value="">YYYY</option>
+		<option value='2011'>2011</option><option value='2012'>2012</option><option value='2013'>2013</option><option value='2014'>2014</option><option value='2015'>2015</option><option value='2016'>2016</option><option value='2017'>2017</option><option value='2018'>2018</option><option value='2019'>2019</option><option value='2020'>2020</option><option value='2021'>2021</option><option value='2022'>2022</option><option value='2023'>2023</option><option value='2024'>2024</option><option value='2025'>2025</option><option value='2026'>2026</option><option value='2027'>2027</option><option value='2028'>2028</option><option value='2029'>2029</option><option value='2030'>2030</option><option value='2031'>2031</option><option value='2032'>2032</option>
+	</select>
+    <!--<textarea name="address" id="address" class="box" cols="45" rows="3"></textarea>--></td>
+  </td>
+  <tr>
+    <td>Your Address:</td>
+	<td><textarea name="address"  class="box" cols="20" rows="3" onblur="a_submit()"></textarea></td>
+  </tr>
+  <tr>
+    <td>Your Message:</td>
+	<td><textarea name="message"  cols="20" class="box" rows="3"></textarea></td>
+  </tr>
+		 </table>
+		 <table align="center">
+		 <tr>
+		 <td><input type="submit" name="button"  value="Submit" class="btn"/></td>
+		 </tr>
+		 </table>
+		 </form>
+		 <p>
+		  <h6><pre>
+   Appointment request will be confirmed via email or phone call.
+ <h6></pre>
+ </p>
+</div>
+</div>
+
+</body>
+</html>

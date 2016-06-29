@@ -1,0 +1,257 @@
+<html>
+<head>
+<title>appointment</title>
+<script type="text/javascript">
+ function validate{
+		  if(trim(document.getElementById("name").value)==""){
+			alert("you must enter your name");
+			document.getElementById("name").focus();
+			return false;
+		}
+		if(trim(document.getElementById("email").value)==""){
+			alert("you must enter your email");
+			document.getElementById("email").focus();
+			return false;
+		}else{
+			 var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+			 if(reg.test(document.getElementById("email").value) == false) {
+				 document.getElementById("email").focus();
+      			alert('Invalid Email Address');
+      			return false;
+   			}
+		}
+		
+		if ( ( document.appointment_table.member[0].checked == false ) && ( document.appointment_table.member[1].checked == false ) ) { 
+			alert ( "are you already registered?" ); 
+			return false; 
+		}
+		if(document.getElementById("salonlist").value==""){
+			alert("Please choose salon from salon list");
+			document.getElementById("salonlist").focus();
+			return false;
+		}
+		var chks = document.getElementsByName('services_offer[]');
+		var hasChecked = false;
+		for (var i = 0; i < chks.length; i++){
+			if (chks[i].checked){
+				hasChecked = true;
+				break;
+			}
+		}
+		if (hasChecked == false){
+			alert("Please select at least one service type.");
+			return false;
+		}
+		
+		if(document.getElementById("rd_dd").value==""){
+			alert("Please choose appointment date");
+			document.getElementById("rd_dd").focus();
+			return false;
+		}
+		
+		if(document.getElementById("rd_mm").value==""){
+			alert("Please choose appointment month");
+			document.getElementById("rd_mm").focus();
+			return false;
+		}
+		
+		if(document.getElementById("rd_yy").value==""){
+			alert("Please choose appointment year");
+			document.getElementById("rd_yy").focus();
+			return false;
+		}
+		
+		if(document.getElementById("address").value==""){
+			alert("Please enter your address");
+			document.getElementById("address").focus();
+			return false;
+		}
+	  }
+    </script>
+<style type="text/css">
+
+.alig
+{
+align=right;
+}
+body
+ {
+ background-image:url('5.jpg');
+ background-repeat:no-repeat;
+ background-attachment:fixed;
+ background-size:100% 100%;
+ color:#787878;
+ margin-left:500px;
+ } 
+ div.transbox
+   {
+   width:450px;
+   height:600px;
+   margin:100px 10px;
+   background-color:#383838;
+   border:1px solid black;
+   opacity:0.6;
+   align:right;
+   filter:alpha(opacity=60); 
+   text-align:justify;
+   overflow:auto;
+    margin:auto;
+	font-family:Monotype Corsiva; 
+	scrollbar-face-color:#780000  ;
+scrollbar-highlight-color:#555555;
+scrollbar-3dlight-color:#444444;
+scrollbar-darkshadow-color:#333333 ;
+scrollbar-shadow-color:#ffffff ;
+scrollbar-arrow-color: #222222;
+scrollbar-track-color:#111111;
+	}
+
+   div.pos
+   {
+ position:fixed;
+   top:80px;
+right:10px;
+}
+   
+	</style>
+</head>
+<body>
+<div class="pos">
+<div class="transbox">
+<h1 align="center">Appointment</h1>
+          <p>
+Enrich started in 1997, with Mulund as its first location. As we evolved and brought a whole spectrum of professional hair and skin care services under one roof, we are now a one stop destination for grooming and personal care. This made us a commercial success story with many brands trying to emulate us. The Enrich Loyalty Program has achieved epic proportions with a loyal clientele of more than 1,00,000 and still counting.</p>
+          <p>&nbsp;</p>
+          <h2 align="center">The Brand Today</h2>
+          
+   <p>Enrich is the largest unisex salon chain in Mumbai. It has achieved "Superbrand" status. Its mantra of offering world class services and products at accessible locations with affordable pricing has made it an industry leader. Enrich is constantly expanding. We offer professional hair and skin services and products standardized to meet stringent quality control.</p>
+   <p>&nbsp;</p>
+          <h2 align="center">The Team</h2>
+          <p>Enrich has been a pioneer in nurturing talent. The team is young, with a drive and passion to be the biggest and the best. The team is constantly trained and inspired. It is the only company whose creative heads present trends for the season. This has now become a style statement in the fashion world. With Enrich constantly investing in education of its team, whether technical training in hair and skin or soft skills like communication or customer service excellence programs, we believe that education is the key for a rewarding and successful career. With a core team that is highly experienced, internationally exposed and won serveral accolades, Enrich is the numero one employer choice for hairdressers, beauty therapists and managers. The staff strength of 400 technicians is unrivalled and amongst the most dedicated to support the Enrich Philosophy..</p>
+          <!--<form action="#" name="appointment_table" id="appointment_table" onsubmit="return validate_form()" method="post">
+      <input type="hidden" name="source" id="source" value="website" />-->
+		  <h1 align="center">
+		  Appointment
+		  </h1>
+		  <h2>
+		  <table class="appointment_table">
+  
+  <tr>
+    <td>Your Name: </td>
+    <td><input type="text" name="name" id="name" class="box" /></td>
+  </tr>
+  <tr>
+    <td>Your E-Mail ID</td>
+    <td><input type="text" name="email" id="email" class="box" /></td>
+  </tr>
+  <tr>
+    <td>Already Enrich Member</td>
+	<td>
+    <input type="radio" name="member" id="member1" class="radio_btn" value="1"/>Yes &nbsp 
+    <input type="radio" name="member" id="member2" class="radio_btn" value="0"/>No &nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+    <td>Salon Interested</td>
+    <td align="left" valign="middle">
+    	
+      <select name="salonlist" id="salonlist" class="box">
+      <option value="" selected="selected">Select Salon:</option>
+            <option value="27">4 BUNGALOW</option>
+           <option value="5">Academy</option>
+           <option value="24">ANDHERI East</option>
+           <option value="6">Bandra</option>
+           <option value="3">BENGALURU</option>
+           <option value="7">Borivali</option>
+           <option value="4">Chakala</option>
+           <option value="8">Chembur</option>
+           <option value="9">Ghatkopar</option>
+           <option value="13">Hypercity</option>
+           <option value="14">Infiniti Mall</option>
+           <option value="10">Kandivali </option>
+           <option value="11">Kandivali East </option>
+           <option value="12">Kemps Corner</option>
+           <option value="26">KHARGHAR</option>
+           <option value="1">Lokhandwala</option>
+           <option value="15">Matunga (CR)</option>
+           <option value="29">Mira Bhayander Road</option>
+           <option value="16">Mulund</option>
+           <option value="25">PHOENIX MARKET</option>
+           <option value="17">Powai </option>
+           <option value="30">Pune</option>
+           <option value="18">PUNE</option>
+           <option value="19">Santacruz</option>
+           <option value="2">Shoppers Stop </option>
+           <option value="20">Sion </option>
+           <option value="21">Thane </option>
+           <option value="28">THANE MEADOWS</option>
+           <option value="23">Vashi</option>
+           <option value="22">Vileparle</option>
+      
+      </select></td>
+  </tr>
+  <tr>
+ 
+    <td rowspan=5>Services Interested</td>
+        	<td><input type="checkbox" name="services_offer[]" id="services_offer_5" class="radio_btn" value="Bridal Packages"/>Bridal Packages</td>
+        </tr>
+        	<tr>
+        	<td>
+            <input type="checkbox" name="services_offer[]" id="services_offer_1" class="radio_btn" value="Hair"/>
+          Hair</td>
+        </tr>
+        	<tr>
+        	<td><input type="checkbox" name="services_offer[]" id="services_offer_3" class="radio_btn" value="Hands & Feet"/>
+          	Hands & Feet</td>
+        </tr>
+        	<tr>
+        	<td >
+            <input type="checkbox" name="services_offer[]" id="services_offer_4" class="radio_btn" value="Make Up"/>
+          	Make Up</td>
+        </tr>
+        	<tr>
+        	<td>
+            <input type="checkbox" name="services_offer[]" id="services_offer_2" class="radio_btn" value="Skin"/>
+        Skin</td>
+        </tr>
+       </td>
+  </tr>
+   <tr>
+    <td>Appointment Date: </td>
+	<td>
+    <select name="rd_dd" id="rd_dd" style="width:50px">
+		<option value="">DD</option>
+		<option value='1'>01</option><option value='2'>02</option><option value='3'>03</option><option value='4'>04</option><option value='5'>05</option><option value='6'>06</option><option value='7'>07</option><option value='8'>08</option><option value='9'>09</option><option value='10'>10</option><option value='11'>11</option><option value='12'>12</option><option value='13'>13</option><option value='14'>14</option><option value='15'>15</option><option value='16'>16</option><option value='17'>17</option><option value='18'>18</option><option value='19'>19</option><option value='20'>20</option><option value='21'>21</option><option value='22'>22</option><option value='23'>23</option><option value='24'>24</option><option value='25'>25</option><option value='26'>26</option><option value='27'>27</option><option value='28'>28</option><option value='29'>29</option><option value='30'>30</option><option value='31'>31</option>	</select>
+	- 		
+	<select name="rd_mm" id="rd_mm"  style="width:50px">
+		<option value="">MMM</option>
+		12<option value='1'>Jan</option><option value='2'>Feb</option><option value='3'>Mar</option><option value='4'>Apr</option><option value='5'>May</option><option value='6'>Jun</option><option value='7'>Jul</option><option value='8'>Aug</option><option value='9'>Sep</option><option value='10'>Oct</option><option value='11'>Nov</option><option value='12'>Dec</option>	</select>
+	-
+	<select name="rd_yy" id="rd_yy"  style="width:90px">
+	<option value="">YYYY</option>
+		<option value='2011'>2011</option><option value='2012'>2012</option><option value='2013'>2013</option><option value='2014'>2014</option><option value='2015'>2015</option><option value='2016'>2016</option><option value='2017'>2017</option><option value='2018'>2018</option><option value='2019'>2019</option><option value='2020'>2020</option><option value='2021'>2021</option><option value='2022'>2022</option><option value='2023'>2023</option><option value='2024'>2024</option><option value='2025'>2025</option><option value='2026'>2026</option><option value='2027'>2027</option><option value='2028'>2028</option><option value='2029'>2029</option><option value='2030'>2030</option><option value='2031'>2031</option><option value='2032'>2032</option>
+	</select>
+    <!--<textarea name="address" id="address" class="box" cols="45" rows="3"></textarea>--></td>
+  </td>
+  <tr>
+    <td>Your Address:</td>
+	<td><textarea name="address" id="address" class="box" cols="20" rows="3"></textarea></td>
+  </tr>
+  <tr>
+    <td>Your Message:</td>
+	<td><textarea name="message" id="message" cols="20" class="box" rows="3"></textarea></td>
+  </tr>
+		 </table>
+		 <table align="center">
+		 <tr>
+		 <td><input type="submit" name="button" id="button" value="Submit" class="btn" OnClick="javascript:validate()"/></td>
+		 </tr>
+		 <table>
+		 <p>
+		  <h6>
+		  Appointment request will be confirmed via email or phone call.
+ <h6>
+ </p>
+</div>
+</div>
+</body>
+</html>
